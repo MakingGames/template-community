@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Organization Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="site-logo">
+                    <span class="site-title">Organization Name</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item"><a href="programs.html">Programs</a></li>
+                        <li class="nav-item"><a href="blog/">News</a></li>
+                        <li class="nav-item current"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-content">
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <address>
+                            <p><strong>Address</strong><br>
+                            123 Main Street<br>
+                            Your Town, ST 12345</p>
+
+                            <p><strong>Email</strong><br>
+                            <a href="mailto:info@example.com">info@example.com</a></p>
+
+                            <p><strong>Phone</strong><br>
+                            (555) 123-4567</p>
+                        </address>
+
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday: 9am - 5pm<br>
+                        Saturday: 10am - 2pm<br>
+                        Sunday: Closed</p>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Send a Message</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <!-- Honeypot field for spam protection -->
+                            <div class="form-group" style="display: none;">
+                                <label for="website">Website</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                        <p id="form-status" class="form-status"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <div class="container container-narrow">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How do I register for programs?</summary>
+                        <p>Registration information is announced on our News page before each season. You can also contact us directly for registration details and deadlines.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do you offer scholarships or financial assistance?</summary>
+                        <p>We believe everyone should have access to our programs. Please contact us to discuss any financial concerns confidentially. We work with families to ensure cost is never a barrier to participation.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How can I volunteer?</summary>
+                        <p>We're always looking for volunteers! Whether you want to coach, help with events, or serve on a committee, please reach out and we'll find a role that fits your interests and availability.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What is your refund policy?</summary>
+                        <p>Refund policies vary by program. Generally, full refunds are available if requested before the season begins. Partial refunds may be available during the first few weeks of a program. Please contact us for specific details.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I report a concern or provide feedback?</summary>
+                        <p>We value your feedback! You can use the contact form on this page, email us directly, or speak with any board member. All concerns are taken seriously and addressed promptly.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="site-title">Organization Name</span>
+                    <p>Serving our community with quality programs and activities for all ages.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="blog/">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs/baseball.html">Baseball</a></li>
+                        <li><a href="programs/basketball.html">Basketball</a></li>
+                        <li><a href="programs/soccer.html">Soccer</a></li>
+                        <li><a href="programs/football.html">Football</a></li>
+                        <li><a href="programs/swimming.html">Swimming</a></li>
+                        <li><a href="programs.html">View All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Main Street</li>
+                        <li>Your Town, ST 12345</li>
+                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Organization Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

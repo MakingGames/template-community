@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading... - Organization Name</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="site-logo">
+                    <span class="site-title">Organization Name</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="../index.html">Home</a></li>
+                        <li class="nav-item"><a href="../about.html">About</a></li>
+                        <li class="nav-item"><a href="../programs.html">Programs</a></li>
+                        <li class="nav-item current"><a href="./">News</a></li>
+                        <li class="nav-item"><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="page-header">
+            <div class="container">
+                <h1 id="post-title">Loading...</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="blog-layout">
+                <article class="blog-main">
+                    <div class="page-content">
+                        <div class="post-header">
+                            <p class="post-meta" id="post-meta"></p>
+                            <div class="post-tags" id="post-tags"></div>
+                        </div>
+                        <div class="post-content" id="post-content">
+                            <p class="loading">Loading post content...</p>
+                        </div>
+                        <div class="post-footer">
+                            <a href="./" class="btn btn-outline">&larr; Back to News</a>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="widget">
+                        <h3>Recent Posts</h3>
+                        <ul class="quick-links" id="recent-posts-sidebar">
+                            <li class="loading">Loading...</li>
+                        </ul>
+                    </div>
+
+                    <div class="widget">
+                        <h3>Categories</h3>
+                        <ul class="quick-links" id="categories-list">
+                            <li class="loading">Loading...</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="site-title">Organization Name</span>
+                    <p>Serving our community with quality programs and activities for all ages.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../programs.html">Programs</a></li>
+                        <li><a href="./">News</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="../programs/baseball.html">Baseball</a></li>
+                        <li><a href="../programs/basketball.html">Basketball</a></li>
+                        <li><a href="../programs/soccer.html">Soccer</a></li>
+                        <li><a href="../programs/football.html">Football</a></li>
+                        <li><a href="../programs/swimming.html">Swimming</a></li>
+                        <li><a href="../programs.html">View All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Main Street</li>
+                        <li>Your Town, ST 12345</li>
+                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Organization Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSinglePost();
+        });
+    </script>
+</body>
+</html>

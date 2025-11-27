@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="site-logo">
+                    <span class="site-title">Organization Name</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item current"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item"><a href="programs.html">Programs</a></li>
+                        <li class="nav-item"><a href="blog/">News</a></li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="hero hero-carousel">
+            <div class="hero-slides">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-3.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1>Welcome to Organization Name</h1>
+                <p class="hero-tagline">Serving our community since 20XX</p>
+                <a href="programs.html" class="btn btn-lg">Explore Programs</a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What We Offer</h2>
+                    <p>Discover programs and activities designed for every member of our community.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏃</div>
+                        <h3>Youth Programs</h3>
+                        <p>Engaging activities and sports for children of all ages, building skills and friendships.</p>
+                        <a href="programs.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Adult Activities</h3>
+                        <p>Stay active and connected with programs designed for adults in our community.</p>
+                        <a href="programs.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Community Events</h3>
+                        <p>Join us for seasonal events, tournaments, and gatherings that bring everyone together.</p>
+                        <a href="blog/" class="btn btn-outline">View Events</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest News</h2>
+                    <p>Stay up to date with announcements, registration info, and community updates.</p>
+                </div>
+                <div id="recent-posts" class="posts-grid">
+                    <p class="loading">Loading recent news...</p>
+                </div>
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="blog/" class="btn btn-outline">View All News</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Get Started?</h2>
+                <p>Join our community today and discover everything we have to offer.</p>
+                <a href="contact.html" class="btn btn-white btn-lg">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="site-title">Organization Name</span>
+                    <p>Serving our community with quality programs and activities for all ages.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="blog/">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs/baseball.html">Baseball</a></li>
+                        <li><a href="programs/basketball.html">Basketball</a></li>
+                        <li><a href="programs/soccer.html">Soccer</a></li>
+                        <li><a href="programs/football.html">Football</a></li>
+                        <li><a href="programs/swimming.html">Swimming</a></li>
+                        <li><a href="programs.html">View All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Main Street</li>
+                        <li>Your Town, ST 12345</li>
+                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Organization Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        loadRecentPosts('recent-posts', 3);
+    </script>
+</body>
+</html>
