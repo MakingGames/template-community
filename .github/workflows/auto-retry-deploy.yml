@@ -7,16 +7,14 @@ on:
       - 'blog/posts/**'
 
 jobs:
+  # First attempt - verify and retry if needed
   verify-deployment:
     runs-on: ubuntu-latest
-    # Skip if this is already a retry commit
     if: "!contains(github.event.head_commit.message, '[auto-retry]')"
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Wait for Cloudflare deployment
         run: sleep 180
@@ -27,7 +25,7 @@ jobs:
           LOCAL_FIRST_ID=$(cat blog/posts/posts.json | jq -r '.[0].id')
           echo "Expected: $LOCAL_FIRST_ID"
 
-          LIVE_FIRST_ID=$(curl -s "https://groupigniter-demo.pages.dev/blog/posts/posts.json" | jq -r '.[0].id')
+          LIVE_FIRST_ID=$(curl -s "${{ vars.SITE_URL }}/blog/posts/posts.json" | jq -r '.[0].id')
           echo "Live: $LIVE_FIRST_ID"
 
           if [ "$LOCAL_FIRST_ID" = "$LIVE_FIRST_ID" ]; then
@@ -43,3 +41,54 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit --allow-empty -m "Retry Cloudflare deployment [auto-retry]"
           git push
+
+  # Second attempt - verify and notify if still failed
+  verify-retry:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[auto-retry]')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wait for Cloudflare deployment
+        run: sleep 180
+
+      - name: Verify deployment
+        id: verify
+        run: |
+          LOCAL_FIRST_ID=$(cat blog/posts/posts.json | jq -r '.[0].id')
+          echo "Expected: $LOCAL_FIRST_ID"
+
+          LIVE_FIRST_ID=$(curl -s "${{ vars.SITE_URL }}/blog/posts/posts.json" | jq -r '.[0].id')
+          echo "Live: $LIVE_FIRST_ID"
+
+          if [ "$LOCAL_FIRST_ID" = "$LIVE_FIRST_ID" ]; then
+            echo "deployed=true" >> $GITHUB_OUTPUT
+            echo "✅ Retry succeeded!"
+          else
+            echo "deployed=false" >> $GITHUB_OUTPUT
+            echo "❌ Retry also failed"
+          fi
+
+      - name: Send failure notification
+        if: steps.verify.outputs.deployed == 'false'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "⚠️ Cloudflare deployment failed: ${{ github.repository }}"
+          to: support@emberbright.studio
+          from: ${{ secrets.SMTP_FROM }}
+          body: |
+            Cloudflare deployment failed after automatic retry.
+
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.event.head_commit.author.name }}
+
+            Please check the Cloudflare Pages dashboard and manually retry or investigate.
+
+            Dashboard: https://dash.cloudflare.com/
