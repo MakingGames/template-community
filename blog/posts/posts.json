@@ -1,11 +1,26 @@
 [
   {
+    "id": "mandatory-safety-session",
+    "title": "Mandatory Safety Session",
+    "date": "2026-01-13",
+    "category": "Announcements",
+    "tags": [
+      "archery"
+    ],
+    "excerpt": "Archery Safety Session",
+    "author": "Michael Jacobs",
+    "filename": "2026-01-13-mandatory-safety-session.md"
+  },
+  {
     "id": "soccer-fall-registration",
     "title": "Fall Soccer Registration Opens August 1st",
     "date": "2025-07-15",
     "author": "Soccer Committee",
     "category": "Registration",
-    "tags": ["soccer", "registration"],
+    "tags": [
+      "soccer",
+      "registration"
+    ],
     "excerpt": "Mark your calendars! Fall soccer registration opens August 1st for all age divisions.",
     "filename": "soccer-fall-registration.md"
   },
@@ -15,7 +30,10 @@
     "date": "2025-06-01",
     "author": "Soccer Committee",
     "category": "Events",
-    "tags": ["soccer", "events"],
+    "tags": [
+      "soccer",
+      "events"
+    ],
     "excerpt": "Join us for our annual Soccer Field Day on June 21st - fun activities for the whole family!",
     "filename": "soccer-field-day.md"
   },
@@ -25,7 +43,10 @@
     "date": "2025-03-01",
     "author": "Baseball Committee",
     "category": "Registration",
-    "tags": ["baseball", "registration"],
+    "tags": [
+      "baseball",
+      "registration"
+    ],
     "excerpt": "Registration for the spring baseball season is now open! Sign up early to secure your spot.",
     "filename": "baseball-spring-registration-open.md"
   },
@@ -35,7 +56,10 @@
     "date": "2025-02-20",
     "author": "Basketball Committee",
     "category": "Announcements",
-    "tags": ["basketball", "announcements"],
+    "tags": [
+      "basketball",
+      "announcements"
+    ],
     "excerpt": "A huge congratulations to all our teams who competed in this year's winter basketball season!",
     "filename": "basketball-winter-champions.md"
   },
@@ -45,7 +69,10 @@
     "date": "2025-02-15",
     "author": "Baseball Committee",
     "category": "Volunteers",
-    "tags": ["baseball", "programs"],
+    "tags": [
+      "baseball",
+      "programs"
+    ],
     "excerpt": "We're looking for volunteer coaches for the upcoming baseball season. No experience necessary!",
     "filename": "baseball-coaches-needed.md"
   },
@@ -55,7 +82,10 @@
     "date": "2025-02-10",
     "author": "Basketball Committee",
     "category": "Events",
-    "tags": ["basketball", "events"],
+    "tags": [
+      "basketball",
+      "events"
+    ],
     "excerpt": "Improve your game this summer with our week-long basketball skills clinic!",
     "filename": "basketball-skills-clinic.md"
   }
